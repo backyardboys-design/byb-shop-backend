@@ -8,10 +8,9 @@ COPY . .
 RUN npm run build
 
 FROM node:20-alpine AS runner
-WORKDIR /app/.medusa/server
+WORKDIR /app
 
 COPY --from=builder /app/.medusa/server ./
-RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev
 
 EXPOSE 9000
 CMD ["npm", "run", "start"]
