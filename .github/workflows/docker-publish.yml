@@ -3,6 +3,13 @@ name: Build and publish Docker image
 on:
   push:
     branches: ["main"]
+    paths:
+      - "src/**"
+      - "package.json"
+      - "package-lock.json"
+      - "medusa-config.ts"
+      - "Dockerfile"
+      - ".github/workflows/docker-publish.yml"
   workflow_dispatch:
 
 env:
@@ -48,3 +55,4 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          provenance: false
