@@ -48,7 +48,7 @@ module.exports = defineConfig({
             id: "local",
             options: {
               upload_dir: "static",
-              backend_url: "https://api.backyardboys.at/static",
+              backend_url: "https://app.backyardboys.at/static",
             },
           },
         ],
