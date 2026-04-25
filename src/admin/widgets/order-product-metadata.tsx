@@ -23,6 +23,9 @@ const OrderProductMetadataWidget = ({
     "design_notes",
     "base",
     "finish",
+    "order_number",
+    "parts",
+    "adapt_fitment",
   ];
 
   return (
@@ -68,16 +71,22 @@ const keyToText = (key: string) => {
       return "Bike Baujahr";
     case "plastic_parts_info":
       return "Kunststoffteile";
-
     case "colors":
       return "Farben";
     case "design_notes":
       return "Design";
-
     case "base":
       return "Folie";
     case "finish":
       return "Finish";
+
+
+    case "order_number":
+      return "Bestellnummer";
+    case "parts":
+      return "Teile";
+    case "adapt_fitment":
+      return "Anpassung an neue Kunststoffteile";
     default:
       return key;
   }

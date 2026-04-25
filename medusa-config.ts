@@ -23,6 +23,9 @@ module.exports = defineConfig({
     disable: process.env.DISABLE_MEDUSA_ADMIN === "true",
   },
   modules: [
+     {
+      resolve: "./src/modules/invoice-generator",
+     },
     {
       resolve: "@medusajs/medusa/payment",
       options: {
