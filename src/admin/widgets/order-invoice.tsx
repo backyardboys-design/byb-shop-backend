@@ -51,7 +51,7 @@ const OrderInvoiceWidget = ({ data: order }: DetailWidgetProps<AdminOrder>) => {
       const a = document.createElement("a")
 
       a.href = url
-      a.download = `byb-${order.id}.pdf`
+      a.download = `byb-${order.display_id}.pdf`
 
       document.body.appendChild(a)
       a.click()
